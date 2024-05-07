@@ -1,0 +1,164 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff; /* Green text */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em; /* Make the font larger */
+    color: rgb(53, 124, 255); /* Use a bright color */
+    text-shadow: 2px 2px 4px #000000; /* Add a subtle shadow for depth */
+    text-align: center; /* Center the title */
+    font-family: 'Arial', sans-serif; /* Use a modern font */
+    margin-top: 20px; /* Add some spacing at the top */
+  }
+
+  h2 {
+    font-size: 2em; /* Make the font larger */
+    /* Add some padding at the bottom */
+  }
+  
+  #message p {
+    color: #ffffff;
+    font-size: 1.2em;
+  }
+  
+  form {
+    display: flex; /* Make the form a flex container */
+    flex-direction: column; /* Stack the children vertically */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0px 0px 10px rgb(53, 124, 255);
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; /* Adjust the margin */
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; 
+    color: #000; 
+  }
+  
+  input[type="email"], input[type="password"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(53, 124, 255);
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a transition for a smooth color change */
+  }
+
+  button:hover {
+    background-color: rgb(53, 124, 200); /* Change the color when the button is hovered */
+  }
+  
+  #tasksContainer {
+    background-color: #2a2a2a; 
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    border: 1px solid #000;
+    padding: 10px;
+    width: 200px;
+    background-color: #ffffff; 
+    color: black;
+    
+  }
+  
+  .task input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(53, 124, 255);;
+  }
+  
+  #completedTasksContainer {
+    margin-left: 50px;
+  }
+
+  .task.completed {
+    text-decoration: line-through;
+  }
+
+  .task label {
+    position: relative; 
+  }
+  
+  .task.completed span {
+    color: rgb(53, 124, 255);; 
+  }
+
+  .task label::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    display: none;
+    transform: translate(-50%, -50%);
+
+  }
+  
+  .task input[type="checkbox"]:checked + label::after {
+    display: block;
+  }
+
+  #tasksWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #tasksWrapper h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  #tasksContainer, #completedTasksContainer {
+    background-color: #1a1a1a; /* Same color as the page background */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .task.completed {
+    text-decoration: line-through;
+    color: rgb(53, 124, 255); /* Add this */
+  }

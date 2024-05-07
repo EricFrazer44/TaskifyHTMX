@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Taskify</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    
+  </head>
+  <body>
+    <div id="message">
+      <h1>Taskify</h1>
+    </div>
+
+    <form id="signUpForm">
+      <input id="signUpEmail" type="email" name="email">
+      <input id="signUpPassword" type="password" name="password">
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <form id="signInForm">
+      <input id="email" type="email" name="email">
+      <input id="password" type="password" name="password">
+      <button type="submit">Sign In</button>
+    </form>
+
+    <form id="addTaskForm">
+      <input id="task" type="text" name="task">
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="tasksWrapper">
+      <h2>Tasks</h2>
+      <div id="tasksContainer"></div>
+      <h2>Completed Tasks</h2>
+      <div id="completedTasksContainer"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+</html>
